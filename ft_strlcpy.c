@@ -6,11 +6,11 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:33:40 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 14:28:29 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:38:39 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlcpy(char *dest, char *src, int size)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -19,13 +19,13 @@ int	ft_strlcpy(char *dest, char *src, int size)
 	j = 0;
 	while (src[j])
 		j++;
-	if (size == 0)
+	if (dstsize == 0)
 		return (j);
-	while (i < size - 1 && src[i])
+	while (i < dstsize - 1 && src[i])
 	{
-		dest[i] = src[j];
+		dst[i] = src[j];
 		i++;
 	}
-	dest[i] = '\0';
+	dst[i] = '\0';
 	return (j);
 }

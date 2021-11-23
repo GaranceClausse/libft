@@ -6,11 +6,11 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:20:22 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 14:29:15 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:32:46 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 

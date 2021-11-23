@@ -6,11 +6,11 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:53:07 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 12:06:29 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:33:47 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	strncmp(char *s1, char *s2, int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int	i;
 

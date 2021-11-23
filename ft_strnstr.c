@@ -6,28 +6,28 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 12:06:47 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 14:29:40 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:36:31 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(char *str, char *to_find, int len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	int	i;
 	int	j;
 
 	i = 0;
-	if (to_find[0] == '\0')
-		return (str);
-	while (str[i] && i < len)
+	if (needle[0] == '\0')
+		return (haystack);
+	while (haystack[i] && i < len)
 	{
 		j = 0;
-		if (str[i] == to_find[j])
+		if (haystack[i] == needle[j])
 		{
-			while (str[i + j] == to_find[j])
+			while (haystack[i + j] == needle[j])
 			{
 				j++;
-				if (to_find[j] == '\0')
-					return (&str[i]);
+				if (needle[j] == '\0')
+					return (&haystack[i]);
 			}
 		}
 		i++;

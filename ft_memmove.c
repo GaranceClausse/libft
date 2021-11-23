@@ -6,11 +6,11 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:51:30 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 15:47:00 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:27:55 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int		i;
 	char	*csrc;
