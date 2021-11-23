@@ -6,14 +6,14 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:10:03 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 10:15:27 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/23 14:14:16 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha (int c)
+int	ft_isalpha(int c)
 {
-	if (c >= 101 || c <= 172)
-		return 1
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
 	else
-		return 0
+		return (0);
 }

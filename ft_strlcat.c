@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:39:31 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 11:51:48 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/23 14:27:35 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	ft_strlcat(char *dst, char *src, int size)
 
 	i = 0;
 	j = 0;
-   	while (dest[i])
-   		i++;
+	while (dest[i])
+		i++;
 	while (src[j] && i <= size - 1)
 	{
 		dest[i] = src[j];

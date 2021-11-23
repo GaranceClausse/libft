@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 12:06:47 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 12:14:43 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/23 14:29:40 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strnstr(char *str, char *to_find, int len)
 	int	j;
 
 	i = 0;
-	if (to_find[0] = '\0')
+	if (to_find[0] == '\0')
 		return (str);
 	while (str[i] && i < len)
 	{

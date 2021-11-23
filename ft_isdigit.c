@@ -6,11 +6,14 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 10:39:31 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 11:13:40 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/23 14:16:19 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isdigit (int c)
+int	isdigit(int c)
 {
-
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }
