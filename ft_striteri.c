@@ -1,46 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 15:03:08 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 15:32:27 by gclausse         ###   ########.fr       */
+/*   Created: 2021/11/24 16:15:32 by gclausse          #+#    #+#             */
+/*   Updated: 2021/11/24 16:21:13 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_itoa(int n)
+#include <libft.h>
+
+void *ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int		i;
-	int		cpt;
-	long int	nbr;
-	char		*str;
+	size_t	i;
 
 	i = 0;
-	cpt = 1;
-	nbr = n;
-	if (n < 0)
+	while (s[i])
 	{
-		nbr = nbr * -1;
-		cpt = 2;
+		s[i] = f(i, &s[i]);
+		i++;
 	}
-	while (nbr / 10)
-	{
-		cpt++;
-		nbr = nbr / 10;
-	}
-	str = malloc(sizeof(char) * (cpt + 1));
-	if (!str)
-		return (NULL);
-	str[cpt] = '\0';
-	if (n < 0)
-		str[0] = '-';
-	while ((cpt + 1) > 0)
-	{
-		str[cpt - 1] = n % 10 + 48;
-		n = n / 10;
-		cpt--;
-	}
-	return (str);
 }
+

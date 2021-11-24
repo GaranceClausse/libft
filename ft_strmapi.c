@@ -1,46 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 15:03:08 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 15:32:27 by gclausse         ###   ########.fr       */
+/*   Created: 2021/11/24 15:58:56 by gclausse          #+#    #+#             */
+/*   Updated: 2021/11/24 16:15:00 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_itoa(int n)
-{
-	int		i;
-	int		cpt;
-	long int	nbr;
-	char		*str;
+#include <stdlib.h>
+#include <libft.h>
 
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	size_t	len;
+	size_t	i;
+	char* str;
+	
+	len = ft_strlen(s);
 	i = 0;
-	cpt = 1;
-	nbr = n;
-	if (n < 0)
-	{
-		nbr = nbr * -1;
-		cpt = 2;
-	}
-	while (nbr / 10)
-	{
-		cpt++;
-		nbr = nbr / 10;
-	}
-	str = malloc(sizeof(char) * (cpt + 1));
+	if (!s || !f)
+		return (NULL);
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	str[cpt] = '\0';
-	if (n < 0)
-		str[0] = '-';
-	while ((cpt + 1) > 0)
+	while (i < len)
 	{
-		str[cpt - 1] = n % 10 + 48;
-		n = n / 10;
-		cpt--;
+		str[i] = f(i, s[i]);
+		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
