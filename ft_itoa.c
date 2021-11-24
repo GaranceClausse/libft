@@ -6,16 +6,16 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:03:08 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 15:32:27 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/24 16:58:49 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_itoa(int n)
 {
-	int		i;
-	int		cpt;
+	int			i;
+	int			cpt;
 	long int	nbr;
-	char		*str;
+	char			*str;
 
 	i = 0;
 	cpt = 1;

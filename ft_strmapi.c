@@ -6,19 +6,19 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:58:56 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 16:15:00 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/24 17:01:27 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <libft.h>
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	len;
-	size_t	i;
-	char* str;
-	
+	size_t		len;
+	size_t		i;
+	char		*str;
+
 	len = ft_strlen(s);
 	i = 0;
 	if (!s || !f)

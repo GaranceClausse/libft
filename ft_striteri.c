@@ -6,13 +6,13 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:15:32 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 16:21:13 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/24 17:01:57 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void *ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	*ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
 
@@ -23,4 +23,3 @@ void *ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-

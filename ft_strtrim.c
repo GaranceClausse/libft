@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:26:05 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 12:09:07 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/24 16:59:46 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int	*find_ocurence(char *str, char c)
 	return (0);
 }
 
-
 size_t	ft_strlen(const char *s)
 {
 	int	i;
@@ -39,7 +38,7 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int		i;
 	char				*cpy;
@@ -58,11 +57,10 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	return (cpy);
 }
 
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*cpy;
 
 	i = 0;
@@ -72,5 +70,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (find_ocurence(set, s1[j]) == 1)
 		j--;
 	return (ft_substr(s1, i, (j - i)));
-	
 }
