@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gclausse <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/24 14:23:46 by gclausse          #+#    #+#              #
-#    Updated: 2021/11/24 14:52:08 by gclausse         ###   ########.fr        #
+#    Created: 2021/11/25 11:13:42 by gclausse          #+#    #+#              #
+#    Updated: 2021/11/25 12:50:23 by gclausse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,20 +63,15 @@ CFLAGS= -Wall -Werror -Wextra
 
 OBJ= ${SRC:.c=.o}
 
-OBJBONUS= ${SRCBONUS:.c=.o}
-
 %.o: %.c
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 all: ${NAME}
 
 ${NAME}: ${OBJ}
-	ar rc ${NAME} ${OBJ}
+	ar -rc ${NAME} ${OBJ}
 
-${NAME}: ${OBJBONUS}
-	ar rc ${NAME} ${OBJBONUS}
-
-clean: 
+clean:
 	rm -f *.o
 
 fclean: clean
