@@ -6,12 +6,12 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 15:53:59 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/25 12:25:03 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:12:49 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-/*
+
 void	*ft_calloc(size_t count, size_t size)
 {
 	size_t	i;
@@ -26,4 +26,5 @@ void	*ft_calloc(size_t count, size_t size)
 		cpy[i] = 0;
 		i++;
 	}
-}*/
+	return (NULL);
+}
