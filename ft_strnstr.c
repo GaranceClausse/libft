@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 12:06:47 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/25 12:24:05 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 15:51:34 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		j = 0;
 		if (str[i] == to_find[j])
 		{
-			while (str[i + j] == to_find[j])
+			while (str[i + j] == to_find[j] && i + j < len)
 			{
 				j++;
 				if (to_find[j] == '\0')
@@ -38,5 +38,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
