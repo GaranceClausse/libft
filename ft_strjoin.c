@@ -6,12 +6,11 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:15:32 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 17:02:50 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:25:28 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

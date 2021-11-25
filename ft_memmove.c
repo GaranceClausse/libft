@@ -6,10 +6,12 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:51:30 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 16:27:55 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:03:48 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+/*
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int		i;
@@ -33,4 +35,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		i++;
 	}
 	return (dst);
-}
+}*/

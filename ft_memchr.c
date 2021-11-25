@@ -6,19 +6,23 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 15:32:38 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 15:46:04 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:19:45 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
+	size_t		i;
+	char	*str;
 
 	i = 0;
-	while (s[i] && i < n && s[i] != c)
+	str = (char *)s;
+	while (str[i] && i < n && str[i] != c)
 		i++;
 	if (i < n)
-		return (&s[i]);
+		return (&str[i]);
 	else
 		return (NULL);
 }

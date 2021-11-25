@@ -6,14 +6,12 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 17:16:45 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 17:17:44 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 11:10:10 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+//#include <libft.h>
 #include <stdlib.h>
 
-t_list	*ft_lstnew(void *content)
-{
+//t_list	*ft_lstnew(void *content)
 
-}

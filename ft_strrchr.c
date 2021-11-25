@@ -6,21 +6,23 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:06:31 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 14:09:56 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:17:18 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char	*str;
 
 	i = 0;
-	while (s[i])
+	str = (char *)s;
+	while (str[i])
 		i++;
-	while (i >= 0 && s[i] != c)
+	while (i >= 0 && str[i] != c)
 		i--;
 	if (i != 0)
-		return (&s[i]);
+		return (&str[i]);
 	else
-		return (NULL);
+		return (0);
 }

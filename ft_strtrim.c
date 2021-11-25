@@ -6,19 +6,19 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:26:05 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 16:59:46 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:29:10 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	*find_ocurence(char *str, char c)
+int	find_ocurence(const char *str, char c)
 {
 	int	i;
 
 	i = 0;
 	if (str[0] == '\0')
-		return (str);
+		return (0);
 	while (str[i])
 	{
 		if (str[i] == c)
@@ -61,7 +61,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
-	char	*cpy;
 
 	i = 0;
 	j = ft_strlen(s1);

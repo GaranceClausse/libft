@@ -6,13 +6,15 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:53:07 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 16:33:47 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:18:10 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n)

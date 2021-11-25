@@ -6,15 +6,14 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:37:36 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 17:00:14 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:38:47 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
 	write(fd, s, ft_strlen(s));
-	write(fd, '\n', 1);
+	write(fd, "\n", 1);
 }

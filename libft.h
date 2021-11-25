@@ -6,12 +6,14 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:55:41 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 17:11:58 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 11:57:33 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#ifndef LIBFT_H_ 
+#define LIBFT_H_
 
-#ifndef LIBFT_H   
-#define LIBFT_H
+#include <libc.h>
+
 
 int	ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);

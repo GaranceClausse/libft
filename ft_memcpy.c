@@ -6,10 +6,12 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:44:12 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 15:32:17 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:03:16 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+/*
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
 	int		i;
@@ -25,4 +27,4 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 		i++;
 	}
 	return (dst);
-}
+}*/

@@ -6,19 +6,23 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 13:59:20 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/23 14:05:25 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/25 12:15:04 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char	*str;
 
 	i = 0;
-	while (s[i] && s[i] != c)
+	str = (char *)s;
+	while (str[i] && str[i] != c)
 		i++;
-	if (s[i] != '\0')
-		return (&s[i]);
+	if (str[i] != '\0')
+		return (&str[i]);
 	else
 		return (NULL);
 }
