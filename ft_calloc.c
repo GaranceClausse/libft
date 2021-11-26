@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 15:53:59 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/25 16:12:49 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/26 14:08:27 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	while (cpy[i])
 	{
-		cpy[i] = 0;
+		cpy[i] = '\0';
 		i++;
 	}
-	return (NULL);
+	return (&cpy[0]);
 }

@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:51:30 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/25 15:05:14 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/26 12:16:18 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	csrc = (char *)src;
 	move = (char *)dst;
-	while (csrc[i] && i < len)
+	while (i < len)
 	{
 		move[i] = csrc[i];
 		i++;
