@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:27:26 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/26 19:19:10 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:16:46 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char	**ft_split(char const *s, char c)
 		{
 			cpy[j] = malloc(sizeof(char) * (numlet(&s[i], c) + 1));
 			printf("num letters : %d\n", (numlet(&s[i], c) + 1));
-			while (s[i] != c && s[i + 1])
+			while (s[i] != c && s[i])
 			{
 				cpy[j][k] = s[i];
 				i++;
@@ -86,19 +86,3 @@ char	**ft_split(char const *s, char c)
 	cpy[j] = NULL;
 	return (cpy);
 }
-/*
-int	main()
-{
-	char **tab = ft_split("tripouille     tr   rtb   ", '\0');
-
-
-	printf("0 = %s\n", tab[0]);
-	printf("1 = %s\n", tab[1]);
-	printf("2 = %s\n", tab[2]);
-	printf("3 = %s\n", tab[3]);
-
-}
-*/
-
-
-
