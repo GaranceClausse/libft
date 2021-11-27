@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:03:08 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/27 16:07:38 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/27 17:48:31 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,16 @@ char	*ft_itoa(int n)
 	char		*str;
 
 	nbr = n;
+	cpt = numsize(nbr);
 	if (n < 0)
 		nbr = nbr * -1;
-	cpt = numsize(nbr);
 	str = malloc(sizeof(char) * (cpt + 1));
 	if (!str)
 		return (NULL);
 	str[cpt] = '\0';
-	if (n >= 0)
-		cpt = cpt - 1;
-	while ((cpt + 1) > 0)
+	while ((cpt + 1) > 1)
 	{
-		str[cpt] = nbr % 10 + 48;
+		str[cpt - 1] = nbr % 10 + 48;
 		nbr = nbr / 10;
 		cpt--;
 	}

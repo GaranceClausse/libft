@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:27:26 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/27 15:17:52 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/27 17:19:35 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,11 @@ int	num_of_word(const char *str, char c)
 		i++;
 	}
 	return (cpt);
-
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t		i;
+	size_t	i;
 	int		j;
 	int		k;
 	char	**cpy;
