@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:27:26 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/27 15:16:46 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:17:52 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ char	**ft_split(char const *s, char c)
 	char	**cpy;
 
 	cpy = malloc(sizeof(char *) * (num_of_word(s, c) + 1));
-	printf("cpt : %d\n", (num_of_word(s, c) + 1));
 	if (!cpy)
 		return (NULL);
 	i = 0;
@@ -69,7 +68,6 @@ char	**ft_split(char const *s, char c)
 		if (s[i] != c && s[i])
 		{
 			cpy[j] = malloc(sizeof(char) * (numlet(&s[i], c) + 1));
-			printf("num letters : %d\n", (numlet(&s[i], c) + 1));
 			while (s[i] != c && s[i])
 			{
 				cpy[j][k] = s[i];
@@ -77,9 +75,7 @@ char	**ft_split(char const *s, char c)
 				k++;
 			}
 			cpy[j][k] = '\0';
-			printf("cpy : %s\n\n", cpy[j]);
 			j++;
-			printf(" j = %d\n", j);
 		}
 		i++;
 	}
