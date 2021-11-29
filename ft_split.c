@@ -6,13 +6,13 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:27:26 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/27 20:57:06 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/29 15:00:53 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	numlet(const char *str, char c)
+static int	numlet(const char *str, char c)
 {
 	int	i;
 	int	cpt;
@@ -29,34 +29,35 @@ int	numlet(const char *str, char c)
 	return (cpt);
 }
 
-int	num_of_word(const char *str, char c)
+static int	num_of_word(const char *s, char c)
 {
-	int	i;
-	int	cpt;
+	int		i;
+	int		cpt;
+	char	*str;
 
 	i = 0;
-	cpt = 0;
+	cpt = 1;
 	if (c == '\0')
 		return (0);
-	while (str[i] == c)
-		i++;
-	while (str[i])
+	str = ft_strtrim(s, &c);
+	if (str)
 	{
-		if (str[i] == c)
+		while (str[i])
 		{
-			while (str[i] == c)
-			{
-				if (str[i + 1] != c || str[i + 1] == '\0')
-					cpt++;
+			while (str[i + 1] == c)
 				i++;
-			}
+			if (str[i] == c && str[i + 1] != c && str[i + 1] != '\0')
+				cpt++;
+			i++;
 		}
-		i++;
+		free(str);
+		return (cpt);
 	}
-	return (cpt);
+	else
+		return (0);
 }
 
-char	*create_word(const char *s, char c)
+static char	*create_word(const char *s, char c)
 {
 	int		i;
 	char	*str;
@@ -65,7 +66,6 @@ char	*create_word(const char *s, char c)
 	str = malloc(sizeof(char) * (numlet(&s[i], c) + 1));
 	if (!str)
 		return (NULL);
-	str[0] = '\0';
 	while (s[i] != c && s[i])
 	{
 		str[i] = s[i];
@@ -73,6 +73,12 @@ char	*create_word(const char *s, char c)
 	}
 	str[i] = '\0';
 	return (str);
+}
+
+static void	**malloc_pbm(char *cpy)
+{
+	free(cpy);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -84,9 +90,6 @@ char	**ft_split(char const *s, char c)
 	cpy = malloc(sizeof(char *) * (num_of_word(s, c) + 1));
 	if (!cpy)
 		return (NULL);
-	printf("num of words :%d\n", (num_of_word(s, c) + 1));
-
-	cpy[0] = NULL;
 	i = 0;
 	j = 0;
 	while (s[i] && j <= num_of_word(s, c))
@@ -94,34 +97,14 @@ char	**ft_split(char const *s, char c)
 		if (s[i] != c && s[i])
 		{
 			cpy[j] = create_word(&s[i], c);
-			j++;
+			if (cpy[j] == NULL)
+				while (j >= 0)
+					malloc_pbm(cpy[j--]);
+			else
+				j++;
 		}
-
-		i = i + (numlet(&s[i], c)) + 1;
+		i = i + (numlet(&s[i], c)) + (s[i] == c);
 	}
 	cpy[j] = NULL;
 	return (cpy);
-}
-
-int main()
-{
-	char **tab = ft_split("loremipsum dolor sit amet,        consectetur        ipiscing et.    ", ' ');
-	
-	printf("%s\n", tab[0]);
-printf("%s\n", tab[1]);
-printf("%s\n", tab[2]);
-
-printf("%s\n", tab[3]);
-printf("%s\n", tab[4]);
-printf("%s\n", tab[5]);
-printf("%s\n", tab[6]);
-printf("%s\n", tab[7]);
-
-printf("%s\n", tab[8]);
-printf("%s\n", tab[9]);
-printf("%s\n", tab[10]);
-printf("%s\n", tab[11]);
-printf("%s\n", tab[12]);
-
-
 }

@@ -6,14 +6,23 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 17:19:35 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 17:20:02 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/29 12:33:42 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {
+	int	i;
+	t_list	*tmp;
 
+	i = 0;
+	tmp = lst;
+	while (tmp)
+	{
+		tmp->next = next;
+		i++;
+	}
+	return (i);
 }
