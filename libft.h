@@ -5,14 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 14:55:41 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/30 16:54:21 by gclausse         ###   ########.fr       */
+/*   Created: 2021/11/30 17:04:22 by gclausse          #+#    #+#             */
+/*   Updated: 2021/11/30 17:04:30 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H 
+#ifndef LIBFT_H
 # define LIBFT_H
-
 # include <libc.h>
 
 typedef struct s_list
@@ -65,4 +64,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-# endif 
+#endif
