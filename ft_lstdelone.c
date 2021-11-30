@@ -6,14 +6,17 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 17:21:47 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/24 17:22:33 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/30 12:18:57 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-
+	if (lst)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }

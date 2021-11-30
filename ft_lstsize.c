@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 17:19:35 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/29 12:33:42 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/29 15:16:22 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_lstsize(t_list *lst)
 	tmp = lst;
 	while (tmp)
 	{
-		tmp->next = next;
+		tmp = tmp->next;
 		i++;
 	}
 	return (i);
