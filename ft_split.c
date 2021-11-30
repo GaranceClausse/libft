@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:27:26 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/29 15:00:53 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/30 16:39:35 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ char	**ft_split(char const *s, char c)
 	char	**cpy;
 
 	cpy = malloc(sizeof(char *) * (num_of_word(s, c) + 1));
-	if (!cpy)
+	if (!cpy || !s)
 		return (NULL);
 	i = 0;
 	j = 0;

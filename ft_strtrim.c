@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:26:05 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/27 18:37:14 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/30 16:26:20 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 	char	*sep;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
 	j = ft_strlen(s1);
 	str = (char *)s1;

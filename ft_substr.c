@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:03:12 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/27 18:29:11 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/30 16:44:31 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char		*cpy;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	if (len <= ft_strlen(s))
 		cpy = malloc(sizeof(char) * (len + 1));
 	else

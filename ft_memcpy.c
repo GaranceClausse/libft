@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 14:44:12 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/25 16:22:08 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/30 16:15:14 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	csrc = (char *)src;
 	cpy = (char *)dst;
+	if (!dst && !src)
+		return (0);
 	while (i < n)
 	{
 		cpy[i] = csrc[i];

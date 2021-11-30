@@ -6,7 +6,7 @@
 #    By: gclausse <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/25 11:13:42 by gclausse          #+#    #+#              #
-#    Updated: 2021/11/25 12:50:23 by gclausse         ###   ########.fr        #
+#    Updated: 2021/11/30 15:07:19 by gclausse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,6 +63,8 @@ CFLAGS= -Wall -Werror -Wextra
 
 OBJ= ${SRC:.c=.o}
 
+OBJBONUS= ${SRCBONUS:.c=.o}
+
 %.o: %.c
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
@@ -70,6 +72,9 @@ all: ${NAME}
 
 ${NAME}: ${OBJ}
 	ar -rc ${NAME} ${OBJ}
+
+bonus: ${OBJ} ${OBJBONUS}
+	ar -rc ${NAME} ${OBJ} ${OBJBONUS}
 
 clean:
 	rm -f *.o

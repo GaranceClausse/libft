@@ -6,7 +6,7 @@
 /*   By: gclausse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:58:56 by gclausse          #+#    #+#             */
-/*   Updated: 2021/11/25 12:34:43 by gclausse         ###   ########.fr       */
+/*   Updated: 2021/11/30 16:40:54 by gclausse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t		i;
 	char		*str;
 
-	len = ft_strlen(s);
-	i = 0;
 	if (!s || !f)
 		return (NULL);
+	len = ft_strlen(s);
+	i = 0;
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
